@@ -3,6 +3,7 @@
 :root {
     --bg-principal: #f3f5fc;
     --blue-1: #0a3871;
+    --blue-2: #051932;
     --white-1: #ffffff;
     --gray-1: #525355;
     --gray-2: #9c9ea1;
@@ -16,12 +17,12 @@
 }
 
 body{
-    width: 100vw;
+    background: var(--bg-principal);
+    width: 100%;
     min-height: 100vh;
     font-family:'Pangolin';
     letter-spacing: 1px;
     font-size: 16px;
-    background: var(--bg-principal);
 }
 
 .container {
@@ -57,27 +58,33 @@ form fieldset {
     margin-top: 1rem;
 }
 
-form .textarea-code {
+.textarea-code {
+    width: 90%;
     font-size: 20px;
     background: var(--bg-principal);
     border: none;
-    padding: 20px;
+    padding: 20px 0;
     color: var(--gray-1);
+    margin-left: 1rem;
 }
 
-form .textarea-code::placeholder {
+.textarea-code::placeholder {
     color: var(--blue-1);
     font-family: 'Pangolin';
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
-form small {
+fieldset small {
+    display: flex;
     color: var(--gray-1);
     padding-left: 0.5rem;
+    font-size: 0.6rem;
+    gap: 5px;
+    margin-left: 0.5rem;
 }
 
-form .btn-group {
+.btn-group {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -116,7 +123,51 @@ form .btn-group {
     padding: 20px;
     border-radius: 20px;
     color: var(--gray-1);
+    box-shadow: -5px 15px 30px -3px var(--gray-2);
 }
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    background: linear-gradient(var(--bg-principal),#9c9ea1);
+    gap: 1rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description h3 {
+    color: var(--blue-1);
+}
+
+.description p {
+    font-size: 0.8rem;
+    color: var(--gray-1);
+}
+
+.contact {
+    text-align: center;
+    color: var(--blue-1);
+}
+
+.fa-brands{
+    font-size: 3rem;
+    margin: 1rem;
+    color: var(--gray-1);
+}
+
+.copyright {
+    font-size: 0.55rem;
+}
+
 
 .message h2 {
     padding-bottom: 10px;
@@ -127,75 +178,3 @@ form .btn-group {
     color: var(--gray-2);
 }
 
-
-/* Frame 1 */
-
-/* Auto layout */
-/*display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 8px;
-
-position: absolute;
-width: 229px;
-height: 18px;
-left: 16px;
-top: 451px;
-
-
-
-/* bi:exclamation-circle-fill */
-
-/*width: 16px;
-height: 16px;
-
-
-/* Inside auto layout */
-/*flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Group */
-
-/*position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-
-
-/* Vector */
-
-/*position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: #67808E;
-
-
-/* Solo letras minúsculas y sin acentos */
-
-/*width: 205px;
-height: 18px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 150%;
-/* identical to box height, or 18px */
-
-/* Gray/gray-400 */
-/*color: #495057;
-
-
-/* Inside auto layout */
-/*flex: none;
-order: 1;
-flex-grow: 0;
-*/
