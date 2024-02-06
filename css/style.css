@@ -7,6 +7,9 @@
     --white-1: #ffffff;
     --gray-1: #525355;
     --gray-2: #9c9ea1;
+    --gray-3: #cacccf;
+    --gray-4: #e8edf5ec;
+    --transition: all 0.5s ease;
 }
 
 
@@ -66,13 +69,15 @@ form fieldset {
     padding: 20px 0;
     color: var(--gray-1);
     margin-left: 1rem;
+    border-radius: 20px;
 }
 
 .textarea-code::placeholder {
     color: var(--blue-1);
     font-family: 'Pangolin';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
+    padding-left: 10px;
 }
 
 fieldset small {
@@ -92,9 +97,9 @@ fieldset small {
     padding: 0 5px;
 }
 
-.btn-group .btn {
+.btn {
     padding: 12px  0;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -102,15 +107,34 @@ fieldset small {
 .encriptar {
     background: var(--blue-1);
     color: #ffffff;
+    transition: var(--transition);
+}
+
+.encriptar:hover {
+    background: var(--blue-2);
+    transform: scale(0.98);
 }
 
 .copiar {
     color: var(--blue-1);
     background: var(--white-1);
+    transition: var(--transition);
+}
+
+.copiar:hover {
+    background: var(--gray-4);
+    transform: scale(0.98);
 }
 
 .desencriptar {
     color: var(--blue-1);
+    transition: var(--transition);
+}
+
+.desencriptar:hover {
+    background: var(--gray-3);
+    transform: scale(0.98);
+
 }
 
 .textarea-decode {
@@ -133,7 +157,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
-    background: linear-gradient(var(--bg-principal),#9c9ea1);
+    background: linear-gradient(var(--bg-principal),#6c6d70d0);
     gap: 1rem;
 }
 
@@ -164,10 +188,15 @@ footer {
     color: var(--gray-1);
 }
 
-.copyright {
-    font-size: 0.55rem;
+.fa-brands:hover {
+    color: var(--gray-2)
 }
 
+.copyright {
+    font-size: 0.55rem;
+    color: var(--blue-2);
+    margin: 1rem 0;
+}
 
 .message h2 {
     padding-bottom: 10px;
@@ -175,6 +204,35 @@ footer {
 }
 
 .message p {
-    color: var(--gray-2);
+    color: var(--gray-3);
 }
 
+/* tablet */
+@media screen and (min-width:425px){
+    main {
+        margin-top: 1.5rem;
+    }
+    
+    .nav-logo {
+        width: 10%;
+    }
+
+    .textarea-code, .textarea-decode, .copiar{
+        width: 90vw;
+        margin-left: 2rem;
+    }
+
+    .textarea-code::placeholder {
+        font-size: 2rem;
+    }
+
+    .btn-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    fieldset small {
+        font-size: 1rem;
+    }
+
+}
