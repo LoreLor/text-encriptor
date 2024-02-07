@@ -208,7 +208,7 @@ footer {
 }
 
 /* tablet */
-@media screen and (min-width:425px){
+@media screen and (min-width: 426px){
     main {
         margin-top: 1.5rem;
     }
@@ -260,10 +260,16 @@ footer {
 
     .textarea-code {
         width: 60vw;
+        height: 100vh;
+        font-size: 1.8rem;
     }
 
     fieldset small {
         padding: 5px 15px;
+    }
+
+    .textarea-decode {
+        height: 100vh;
     }
 
     .textarea-decode, .copiar {
@@ -271,6 +277,12 @@ footer {
     }
 
     .copiar {
-        margin-top: 1.7rem;
+        margin-top: 1.8rem;
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
     }
 }

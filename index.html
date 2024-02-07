@@ -27,7 +27,7 @@
                     <fieldset>
                         <textarea
                             name="texto"
-                            id="texto"
+                            id="input-texto"
                             cols="30"
                             rows="20"
                             placeholder="Ingrese el texto aquí"
@@ -38,18 +38,26 @@
                             letras mayúsculas y sin caracteres especiales</small
                         >
                         <div class="btn-group">
-                            <button type="submit" class="btn encriptar">
+                            <button 
+                                type="submit" 
+                                class="btn encriptar"
+                                id="btn-encriptar"
+                            >
                                 Encriptar
                             </button>
-                            <button type="button" class="btn desencriptar">
+                            <button 
+                                type="button" 
+                                class="btn desencriptar"
+                                id="btn-desencriptar"
+                            >
                                 Desencriptar
                             </button>
                         </div>
                     </fieldset>
                     <fieldset>
                         <textarea
-                            name="textoDesencriptado"
-                            id="textoDesencriptado"
+                            name="texto-encriptado"
+                            id="texto-encriptado"
                             cols="30"
                             rows="20"
                             class="textarea-decode"
@@ -58,7 +66,8 @@
                             <button
                                 type="button"
                                 class="btn copiar"
-                                aria-label="Copiar texto"
+                                id="btn-copy"
+                                onclick="encriptarTexto()"
                             >
                                 Copiar
                             </button>
@@ -90,4 +99,7 @@
             <small class="copyright">&#169; Derechos Reservados - Formosa - Argentina 2024.-</small>
         </footer>
     </body>
+
+    <!-- scipts -->
+    <script src="js/index.js"></script>
 </html>
