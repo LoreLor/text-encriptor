@@ -1,105 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Text Encriptor</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <script
-            src="https://kit.fontawesome.com/12a1cdb104.js"
-            crossorigin="anonymous"
-        ></script>
-    </head>
 
-    <body>
-        <div class="container">
-            <header>
-                <nav>
-                    <img
-                        src="assets/logo_alura.jpg"
-                        alt="Logo de Alura"
-                        class="nav-logo"
-                    />
-                </nav>
-            </header>
-            <main class="main-coder">
-                <form>
-                    <fieldset>
-                        <textarea
-                            name="texto"
-                            id="input-texto"
-                            cols="30"
-                            rows="20"
-                            placeholder="Ingrese el texto aquí"
-                            class="textarea-code"
-                        ></textarea>
-                        <small
-                            ><i class="fa-solid fa-circle-exclamation"></i> Sólo
-                            letras mayúsculas y sin caracteres especiales</small
-                        >
-                        <div class="btn-group">
-                            <button 
-                                type="submit" 
-                                class="btn encriptar"
-                                id="btn-encriptar"
-                            >
-                                Encriptar
-                            </button>
-                            <button 
-                                type="button" 
-                                class="btn desencriptar"
-                                id="btn-desencriptar"
-                            >
-                                Desencriptar
-                            </button>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <textarea
-                            name="texto-encriptado"
-                            id="texto-encriptado"
-                            cols="30"
-                            rows="20"
-                            class="textarea-decode"
-                        ></textarea>
-                        <div class="btn-group">
-                            <button
-                                type="button"
-                                class="btn copiar"
-                                id="btn-copy"
-                                onclick="encriptarTexto()"
-                            >
-                                Copiar
-                            </button>
-                        </div>
-                    </fieldset>
-                </form>
-            </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Encriptor</title>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="assets/logo_alura.jpg" alt="Logo de Alura" class="nav-logo" />
+            </nav>
+        </header>
+        <main class="main-coder">
+            <form>
+                <fieldset>
+                    <textarea name="texto" id="input-texto" cols="30" rows="20" placeholder="Ingrese el texto aquí"
+                        class="textarea-code"></textarea>
+                    <small><i class="fa-solid fa-circle-exclamation"></i> Sólo
+                        letras minúsculas y sin caracteres especiales</small>
+                    <div class="btn-group">
+                        <button type="button" class="btn encriptar" id="btn-encriptar">
+                            Encriptar
+                        </button>
+                        <button type="button" class="btn desencriptar" id="btn-desencriptar">
+                            Desencriptar
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <textarea name="texto-encriptado" id="texto-encriptado" cols="30" rows="20"
+                        class="textarea-decode"></textarea>
+                    <div class="btn-group">
+                        <button type="button" class="btn copiar" id="btn-copiar">
+                            Copiar
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <div class="description">
+            <h3>María Lorena De Armas</h3>
+            <p>Challenge Oracle One - Alura Latam</p>
         </div>
-        <footer>
-            <div class="description">
-                <h3>María Lorena De Armas</h3>
-                <p>Challenge Oracle One - Alura Latam</p>
-            </div>
-            <div class="contact">
-                <h3>Sígueme!</h3>
-                <a 
-                    href="https://github.com/LoreLor" 
-                    target="_blank"
-                >
-                    <i class="fa-brands fa-square-github"></i>
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/lorena-de-armas"
-                    target="_blank"
-                >
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>
-            <small class="copyright">&#169; Derechos Reservados - Formosa - Argentina 2024.-</small>
-        </footer>
-    </body>
+        <div class="contact">
+            <h3>Sígueme!</h3>
+            <a href="https://github.com/LoreLor" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lorena-de-armas" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <small class="copyright">&#169; Derechos Reservados - Formosa - Argentina 2024.-</small>
+    </footer>
+</body>
 
-    <!-- scipts -->
-    <script src="js/index.js"></script>
+<!-- scipts -->
+<script src="https://kit.fontawesome.com/12a1cdb104.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+<script src="js/index.js"></script>
+
 </html>
