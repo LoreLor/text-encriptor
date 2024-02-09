@@ -1,4 +1,4 @@
-# Challenge Oracle One - Alura Latam
+# Challenge Oracle One - Alura Latam G6
 ## Encriptador / Desencriptador de textos
 
 ### Descripción:
