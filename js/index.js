@@ -47,13 +47,14 @@ const btnEncriptar = document.getElementById('btn-encriptar');
 btnEncriptar.addEventListener('click', () => {
     let inputText = document.getElementById('input-texto').value;
     let result = document.getElementById('texto-encriptado');
+    let imageOverlay = document.querySelector('.image-overlay');
     console.log('result :>> ', result);
 
     if(!textValidation(inputText)) {
+        imageOverlay.style.display = "none";
         result.textContent = encriptarText(inputText);
         document.getElementById('input-texto').value = "";
     } else {
-        // ver si aca va lo de la imagen
         inputText = "";
     }
 });
@@ -70,7 +71,6 @@ btnDesencriptar.addEventListener('click',() => {
             let result = document.getElementById('input-texto');
             result.value = desencripted;
             result.textContent = desencripted;
-            document.getElementById('texto-encriptado').value = "";
             console.log('desencripted :>> ', desencripted);
         } else {
             Swal.fire({
@@ -80,22 +80,28 @@ btnDesencriptar.addEventListener('click',() => {
             })
         }
     }
-);
-
-const btnCopiar = document.getElementById('btn-copiar');
-
-btnCopiar.addEventListener('click', () =>{
-    let copy = document.getElementById('texto-encriptado').value;
-    navigator.clipboard.writeText(copy);
-    document.getElementById('input-texto').value = "";
-    console.log('copy :>> ', copy);
-    if(copy){
-        document.getElementById('texto-encriptado').value= "";
-    } else {
-         Swal.fire({
-            title: '¡Error!',
-            text: 'No existe un texto para copiar.',
-            icon: 'error',
-         })
-    }
-});
+    );
+    
+    const btnCopiar = document.getElementById('btn-copiar');
+    
+    btnCopiar.addEventListener('click', () =>{
+        let copy = document.getElementById('texto-encriptado').value;
+        console.log('copy :>> ', copy);
+        if(copy){
+            navigator.clipboard.writeText(copy);
+        } else {
+            Swal.fire({
+                title: '¡Error!',
+                text: 'No existe un texto para copiar.',
+                icon: 'error',
+            })
+        }
+    });
+    
+    const btnElimiar = document.getElementById('btn-eliminar');
+    btnElimiar.addEventListener('click', () => {
+        document.getElementById('input-texto').value = "";
+        document.getElementById('texto-encriptado').value = "";
+        document.querySelector('.image-overlay').style.display ="flex";
+        
+    });

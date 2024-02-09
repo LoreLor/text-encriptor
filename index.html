@@ -11,18 +11,27 @@
 
 <body>
     <div class="container">
+        <!-- Header Content -->
         <header>
             <nav>
                 <img src="assets/logo_alura.jpg" alt="Logo de Alura" class="nav-logo" />
             </nav>
         </header>
+        <!-- Main Content -->
         <main class="main-coder">
+            
+            <button type="button" class="btn eliminar" id="btn-eliminar">Eliminar Textos</button>
             <form>
                 <fieldset>
-                    <textarea name="texto" id="input-texto" cols="30" rows="20" placeholder="Ingrese el texto aquí"
+                    <textarea 
+                        name="texto" 
+                        id="input-texto" 
+                        cols="30" 
+                        rows="20" 
+                        placeholder="Ingrese el texto aquí"
                         class="textarea-code"></textarea>
-                    <small><i class="fa-solid fa-circle-exclamation"></i> Sólo
-                        letras minúsculas y sin caracteres especiales</small>
+                    <small><i class="fa-solid fa-circle-exclamation"></i> 
+                        Sólo letras minúsculas y sin caracteres especiales</small>
                     <div class="btn-group">
                         <button type="button" class="btn encriptar" id="btn-encriptar">
                             Encriptar
@@ -33,8 +42,18 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <textarea name="texto-encriptado" id="texto-encriptado" cols="30" rows="20"
-                        class="textarea-decode"></textarea>
+                    <textarea 
+                        name="texto-encriptado" 
+                        id="texto-encriptado" 
+                        cols="30" 
+                        rows="20"
+                        class="textarea-decode"
+                    ></textarea>
+                    <div class="image-overlay">
+                        <img src="assets/muñeco.png" alt="Imagen de un niño buscando">
+                        <h3>Ningún mensaje fue encontrado</h3>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
                     <div class="btn-group">
                         <button type="button" class="btn copiar" id="btn-copiar">
                             Copiar
@@ -44,6 +63,7 @@
             </form>
         </main>
     </div>
+
     <footer>
         <div class="description">
             <h3>María Lorena De Armas</h3>

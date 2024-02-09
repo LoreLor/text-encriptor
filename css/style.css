@@ -22,7 +22,7 @@
 body{
     background: var(--bg-principal);
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-family:'Pangolin';
     letter-spacing: 1px;
     font-size: 16px;
@@ -58,11 +58,10 @@ nav {
 
 form fieldset {
     border: none;
-    margin-top: 1rem;
 }
 
 .textarea-code {
-    width: 90%;
+    width: 85%;
     font-size: 20px;
     background: var(--bg-principal);
     border: none;
@@ -104,13 +103,18 @@ fieldset small {
     font-weight: 600;
 }
 
-.encriptar {
+.eliminar {
+    padding: 8px 0;
+    width: 20rem;
+}
+
+.encriptar, .eliminar {
     background: var(--blue-1);
     color: #ffffff;
     transition: var(--transition);
 }
 
-.encriptar:hover {
+.encriptar:hover, .eliminar:hover {
     background: var(--blue-2);
     transform: scale(0.98);
 }
@@ -148,6 +152,10 @@ fieldset small {
     border-radius: 20px;
     color: var(--gray-1);
     box-shadow: -5px 15px 30px -3px var(--gray-2);
+}
+
+.image-overlay {
+    display: none;
 }
 
 footer {
@@ -255,7 +263,7 @@ footer {
     form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 
     .textarea-code {
@@ -284,5 +292,29 @@ footer {
         font-size: 1.2rem;
         margin: 1rem 0;
         padding-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    main {
+        margin-top:0;
+    }
+    .image-overlay {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        position: absolute;
+        top: 18rem;
+        right:5rem;
+    }
+
+    .image-overlay img {
+        width: 20vw;
+        margin-bottom: 2rem;
+    }
+
+    .image-overlay h3, .image-overlay p {
+        text-align: center;
+        margin-bottom: 1rem;
     }
 }
