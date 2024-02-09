@@ -1,9 +1,9 @@
 // función validación
 function textValidation(inputText) {
     // sólo letras mayúsculas y espacio en blanco
-    let validTextRegex = /^[A-Z\s]*$/;
+    let validTextRegex = /^[a-z ]*$/;
     
-    if (!inputText || validTextRegex.test(inputText)) {
+    if (!inputText || !validTextRegex.test(inputText)) {
         Swal.fire({
             title: '¡Error!',
             text: 'Debe ingresar un texto en minúsculas y sin caracteres especiales.',
