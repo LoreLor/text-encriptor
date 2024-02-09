@@ -28,3 +28,5 @@ Extras:
 Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
 
 ![Captura de pantalla 2024-02-09 142906](https://github.com/LoreLor/text-encriptor/assets/86624472/f1d05edf-59b3-452b-abf8-1be684f2d01a)
+
+### https://lorelor.github.io/text-encriptor
