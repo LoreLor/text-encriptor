@@ -81,7 +81,8 @@ btnDesencriptar.addEventListener('click',() => {
         }
     }
     );
-    
+
+    // copiar
     const btnCopiar = document.getElementById('btn-copiar');
     
     btnCopiar.addEventListener('click', () =>{
@@ -89,6 +90,10 @@ btnDesencriptar.addEventListener('click',() => {
         console.log('copy :>> ', copy);
         if(copy){
             navigator.clipboard.writeText(copy);
+            Swal.fire({
+                title:"Copia exitosa",
+                icon:"success",
+            })
         } else {
             Swal.fire({
                 title: '¡Error!',
