@@ -150,6 +150,7 @@ fieldset small {
     height: 60vh;
     border: none;
     margin-left: 1rem;
+    margin-top: 1rem;
     padding: 20px;
     border-radius: 20px;
     color: var(--gray-1);
@@ -298,7 +299,7 @@ footer {
     }
 
     .copiar {
-        margin-top: 3.8rem;
+        margin-top: 2.75rem;
         margin-left: 0.5rem;
     }
 
@@ -324,7 +325,7 @@ footer {
     }
 
     .textarea-code, .textarea-decode {
-        height: 50vh;
+        height: 60vh;
     }
 
     .textarea-code::placeholder {
@@ -337,9 +338,8 @@ footer {
         justify-content: center;
         width: 20vw;
         position: absolute;
-        top: 11rem;
-        right:8rem;
-        
+        top: 13rem;
+        right:7.5rem;
     }
 
     .image-overlay img {
@@ -355,7 +355,7 @@ footer {
     }
 
     .copiar {
-        margin-top: 3rem;
+        margin-top: 2.8rem;
     }
 
     .eliminar {
